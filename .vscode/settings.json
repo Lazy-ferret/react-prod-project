@@ -1,7 +1,17 @@
 {
     "typescript.tsdk": "node_modules\\typescript\\lib",
-    "i18n-ally.localesPaths": [
-        "public/locales",
-        "src/shared/config/i18n"
-    ]
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "stylelint.enable": true,
+    "stylelint.validate": ["css", "scss"],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": "explicit"
+    },
+    "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+}
 }
