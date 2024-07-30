@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /build
+/storybook-static
 
 # dependencies
 node_modules
