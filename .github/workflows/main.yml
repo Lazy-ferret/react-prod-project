@@ -31,7 +31,7 @@ jobs:
         run: npm run storybook:build
       - name: screenshot testing
         run: npm run test:ui:ci  
-          continue-on-error: true
+        continue-on-error: true
       - name: Save screenshots as artifacts
         uses: actions/upload-artifact@v2
         with:
