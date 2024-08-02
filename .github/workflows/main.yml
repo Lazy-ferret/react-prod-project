@@ -6,10 +6,12 @@ on:
     branches: [ master ]
 jobs:
   pipeline:
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
+    # runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 17.x ]
+        node-version: [ 16.x ]
+        # node-version: [ 17.x ]
 
     steps: 
       - uses: actions/checkout@v2
@@ -21,20 +23,26 @@ jobs:
         run: npm install
       - name: build production project
         run: npm run build:prod
+        if: always()
       - name: linting typescript
         run: npm run lint:ts
+        if: always()
       - name: linting css
         run: npm run lint:scss
+        if: always()
       - name: unit testing
         run: npm run test:unit
+        if: always()
       - name: build storybook
         run: npm run storybook:build
+        if: always()
       - name: screenshot testing
-        run: npm run test:ui:ci  
-        continue-on-error: true
-      - name: Save screenshots as artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          path: .loki/difference/
+        run: npm run test:ui:ci
+        if: always()  
+      #   continue-on-error: true
+      # - name: Save screenshots as artifacts
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     path: .loki/difference/
       
       

@@ -36,7 +36,7 @@ module.exports = {
         'react/function-component-definition': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'no-shadow': 'off',
-        'linebreak-style': 0,
+        'linebreak-style': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': [
@@ -46,6 +46,7 @@ module.exports = {
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
+
     },
     globals: {
         __IS_DEV__: true,
