@@ -49,3 +49,7 @@ electron/release/build
 electron/dll
 
 **/*.env.*
+
+# tests artifacts
+.loki/report.html
+.loki/report.json
