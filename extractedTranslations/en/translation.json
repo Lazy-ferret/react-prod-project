@@ -1,5 +1,8 @@
 {
+  "decrement": "decrement",
+  "increment": "increment",
   "throw error": "throw error",
+  "value": "value",
   "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",

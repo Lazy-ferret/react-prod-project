@@ -9,5 +9,8 @@
     "О сайте": "About",
     "Переключить": "Toggle",
     "Сокращенный язык": "En",
-    "Войти": "Enter"
+    "Войти": "Enter",
+    "value": "Value",
+    "increment": "Increment",
+    "decrement": "Decrement"
 }
