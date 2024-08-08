@@ -12,5 +12,7 @@
     "Войти": "Enter",
     "value": "Value",
     "increment": "Increment",
-    "decrement": "Decrement"
-}
+    "decrement": "Decrement",
+    "Введите имя пользователя": "Input Username",
+    "Введите пароль": "Input password"
+    }

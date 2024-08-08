@@ -6,6 +6,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
+import { LoginModal } from 'features/AuthByUsername';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -16,8 +17,12 @@ export function Navbar({ className }: NavbarProps) {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
 
-    const onToggleModal = useCallback(() => {
-        setIsAuthModal((prev) => !prev);
+    const onCloseModal = useCallback(() => {
+        setIsAuthModal(false);
+    }, []);
+
+    const onOpenModal = useCallback(() => {
+        setIsAuthModal(true);
     }, []);
 
     return (
@@ -25,13 +30,11 @@ export function Navbar({ className }: NavbarProps) {
             <Button
                 className={cls.links}
                 theme={ButtonTheme.CLEAR_INVERTED}
-                onClick={onToggleModal}
+                onClick={onOpenModal}
             >
                 {t('Войти')}
             </Button>
-            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                Lorem, ipsum dolor.
-            </Modal>
+            <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
         </div>
     );
 }
