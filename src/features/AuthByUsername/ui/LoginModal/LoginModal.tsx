@@ -1,4 +1,5 @@
 import { Modal } from 'shared/ui/Modal/Modal';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { LoginForm } from '../LoginForm/LoginForm';
 
 interface LoginModalProps {
@@ -12,7 +13,7 @@ export const LoginModal = (props: LoginModalProps) => {
 
     return (
         <Modal
-            className={className}
+            className={classNames('', {}, [className])}
             isOpen={isOpen}
             onClose={onClose}
             lazy
