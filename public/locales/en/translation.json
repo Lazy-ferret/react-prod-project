@@ -15,5 +15,6 @@
     "decrement": "Decrement",
     "Введите имя пользователя": "Input Username",
     "Введите пароль": "Input password",
-    "Форма авторизации": "Auth form"
+    "Форма авторизации": "Auth form",
+    "Вы ввели неверный логин или пароль": "Wrong password or login"
     }
