@@ -1,5 +1,5 @@
 /* eslint-disable i18next/no-literal-string */
-import { useCallback, useState } from 'react';
+import { useCallback, useState, memo } from 'react';
 
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -14,7 +14,7 @@ interface NavbarProps {
     className?: string
 }
 
-export function Navbar({ className }: NavbarProps) {
+export const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
@@ -60,4 +60,4 @@ export function Navbar({ className }: NavbarProps) {
 
         </div>
     );
-}
+});
