@@ -10,6 +10,7 @@
     "Имя пользователя": "Username",
     "Аватар": "Avatar",
     "Валюта": "Currency",
+    "Страна": "Country",
     "Произошла ошибка при загрузке профиля": "Error occured while loading profile",
     "Попробуйте обновить страницу": "Try to refresh the page"
 }

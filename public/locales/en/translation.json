@@ -16,5 +16,7 @@
     "Введите имя пользователя": "Input Username",
     "Введите пароль": "Input password",
     "Форма авторизации": "Auth form",
-    "Вы ввели неверный логин или пароль": "Wrong password or login"
+    "Вы ввели неверный логин или пароль": "Wrong password or login",
+    "Валюта": "Currency",
+    "Страна": "Country"
     }
