@@ -1,9 +1,7 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { ValidateProfileError } from '../../types/profile';
 import { validateProfileData } from './validateProfileData';
-import { fetchProfileData } from './fetchProfileData';
 
 const data = {
     username: 'admin',
@@ -30,7 +28,7 @@ describe('validateProfileData test', () => {
     });
 
     test('incorrect age', async () => {
-        const result = validateProfileData({ ...data, age: 'xsxsxs' });
+        const result = validateProfileData({ ...data, age: undefined });
         expect(result).toEqual([
             ValidateProfileError.INCORRECT_AGE,
         ]);
