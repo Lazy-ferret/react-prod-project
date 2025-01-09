@@ -1,19 +1,19 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import cls from './ArticlesDetailsPage.module.scss';
+import { memo } from 'react';
+// import cls from './ArticlesDetailsPage.module.scss';
 
 interface ArticlesPageProps {
     className?: string
 }
 
-const ArticlesDetailsPage = ({ className }: ArticlesPageProps) => {
+const ArticleDetailsPage = ({ className }: ArticlesPageProps) => {
     const { t } = useTranslation('profile');
     return (
-        // eslint-disable-next-line i18next/no-literal-string
-        <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            ARTICLES PAGE
-        </div>
+    // <div className={classNames(cls.ArticlesPage, {}, [className])}>
+    // eslint-disable-next-line i18next/no-literal-string
+        <div>ARTICLES PAGE</div>
     );
 };
 
-export default ArticlesDetailsPage;
+export default memo(ArticleDetailsPage);
