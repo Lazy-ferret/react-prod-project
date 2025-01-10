@@ -12,6 +12,6 @@ interface ArticleCodeBlockComponentProps {
 export const ArticleCodeBlockComponent = memo(({ className, block }: ArticleCodeBlockComponentProps) => (
     // eslint-disable-next-line i18next/no-literal-string
     <div className={classNames(cls.ArticleCodeBlockComponent, {}, [className])}>
-        <Code>{block.code}</Code>
+        <Code text={block.code} />
     </div>
 ));
