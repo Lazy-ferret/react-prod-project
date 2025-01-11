@@ -18,5 +18,7 @@
     "Форма авторизации": "Auth form",
     "Вы ввели неверный логин или пароль": "Wrong password or login",
     "Валюта": "Currency",
-    "Страна": "Country"
+    "Страна": "Country",
+    "Комментарии отсутствуют": "No comments"
+
     }
