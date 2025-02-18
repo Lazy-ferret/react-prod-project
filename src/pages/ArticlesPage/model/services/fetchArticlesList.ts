@@ -3,7 +3,9 @@ import { AxiosInstance } from 'axios';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 import { Comment } from 'entities/Comment';
 import { Article } from 'entities/Article';
-import { getArticlesPageLimit, getArticlesPageNumber } from '../selectors/articlesPageSelectors';
+import {
+    getArticlesPageLimit, getArticlesPageNumber, getArticlesPageOrder, getArticlesPageSearch, getArticlesPageSort,
+} from '../selectors/articlesPageSelectors';
 
 interface FetchArticlesListProps {
     page?: number;
@@ -17,8 +19,12 @@ export const fetchArticlesList = createAsyncThunk<
         'articlesPage/fetchArticlesList',
         async (props, thunkApi) => {
             const { extra, rejectWithValue, getState } = thunkApi;
-            const { page = 1 } = props;
+            // const { page = 1 } = props;
             const limit = getArticlesPageLimit(getState());
+            const sort = getArticlesPageSort(getState());
+            const order = getArticlesPageOrder(getState());
+            const search = getArticlesPageSearch(getState());
+            const page = getArticlesPageNumber(getState());
 
             try {
                 const response = await extra.api.get<Article[]>('/articles', {
@@ -26,6 +32,9 @@ export const fetchArticlesList = createAsyncThunk<
                         _expand: 'user',
                         _limit: limit,
                         _page: page,
+                        _sort: sort,
+                        _order: order,
+                        q: search,
                     },
                 });
 
