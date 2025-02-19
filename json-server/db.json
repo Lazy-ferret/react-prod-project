@@ -470,14 +470,14 @@
     },
     {
       "id": "14",
-      "title": "Typescript 14",
-      "subtitle": "Что нового в TS за 2022 год?",
+      "title": "Научная статья",
+      "subtitle": "Что нового в науке за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -494,14 +494,14 @@
     },
     {
       "id": "15",
-      "title": "Typescript 15",
-      "subtitle": "Что нового в TS за 2022 год?",
+      "title": "Экономическая статья",
+      "subtitle": "Что нового в экономике за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {

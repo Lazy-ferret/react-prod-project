@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { Page } from 'widgets/Page/Page';
 import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fecthNextArticlesPage';
 import { initArticlesPage } from 'pages/ArticlesPage/model/services/initArticlesPage';
+import { useSearchParams } from 'react-router-dom';
 import {
     getArticlesPageIsLoading,
     getArticlesPageView,
@@ -29,13 +30,14 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const articles = useSelector(getArticles.selectAll);
     const isLoading = useSelector(getArticlesPageIsLoading);
     const view = useSelector(getArticlesPageView);
+    const [searchParams] = useSearchParams();
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
     }, [dispatch]);
 
     useInitialEffect(() => {
-        initArticlesPage();
+        dispatch(initArticlesPage(searchParams));
     });
 
     return (

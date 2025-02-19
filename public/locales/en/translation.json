@@ -30,5 +30,10 @@
     "убыванию": "descending",
     "дате создания": "creation date",
     "названию": "title",
-    "просмотрам": "views"
+    "просмотрам": "views",
+    "Айти": "IT",
+    "Экономика": "Economics",
+    "Наука": "Science",
+    "Все": "All",
+    "Cтатьи не найдены": "Articles not found"
     }
