@@ -6,7 +6,7 @@
     "start": "webpack serve --env port=3000",
     "start:dev:server": "node ./json-server/index.js",
     "start:dev": "concurrently \"npm start\" \"npm run start:dev:server\"",
-    "build:prod": "webpack --env mode=production apiUrl=https://react-prod-server-3epidg1oh-alexanders-projects-37966df9.vercel.app",
+    "build:prod": "webpack --env mode=production apiUrl=https://react-prod-server-5peolgdvt-alexanders-projects-37966df9.vercel.app",
     "build:dev": "webpack --env mode=development",
     "lint:ts": "eslint \"**/*.{ts, tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts, tsx}\" --fix",
