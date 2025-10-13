@@ -1,6 +1,7 @@
-import { ProfileSchema, profileActions, profileReducer } from 'entities/Profile';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
+import { profileActions, profileReducer } from './profileSlice';
+import { ProfileSchema } from '../types/profile';
 
 const data = {
     username: 'admin',
