@@ -35,7 +35,7 @@ export const CurrencySelect = memo(({
             defaultValue={t('Валюта')}
             label={t('Валюта')}
             items={options}
-            direction="top"
+            direction="top right"
         />
     );
 });
