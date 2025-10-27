@@ -6,6 +6,7 @@
 /out-tsc
 /build
 /storybook-static
+/reports
 
 # dependencies
 node_modules
