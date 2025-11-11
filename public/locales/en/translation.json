@@ -36,5 +36,10 @@
     "Наука": "Science",
     "Все": "All",
     "Cтатьи не найдены": "Articles not found",
-    "Создать статью": "Create an article"
+    "Создать статью": "Create an article",
+    "Админ панель": "Admin Panel",
+    "Нет прав для этой страницы": "No rights for this page",
+    "Админка": "Admin",
+    "Профиль": "Profile",
+    "Выйти": "Logout"
     }
