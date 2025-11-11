@@ -631,6 +631,18 @@
       "userId": "1",
       "text": "xsxsxs",
       "id": "Sewfel5"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "xsxsxs",
+      "id": "fXY3JBF"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "cdcdcd",
+      "id": "C-uJMH2"
     }
   ],
   "users": [
@@ -638,21 +650,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://i.pinimg.com/736x/6d/42/cb/6d42cb6debf7f90ddbebf8a76a615894.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://i.pinimg.com/736x/6d/42/cb/6d42cb6debf7f90ddbebf8a76a615894.jpg"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://i.pinimg.com/736x/6d/42/cb/6d42cb6debf7f90ddbebf8a76a615894.jpg"
     }
   ],
