@@ -4,9 +4,10 @@ import { AddCommentForm } from 'features/AddCommentForm';
 import { CommentList } from 'entities/Comment';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-import { useCallback } from 'react';
+import { Suspense, useCallback } from 'react';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { VStack } from 'shared/ui/Stack';
+import { Loader } from 'shared/ui/Loader/Loader';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import {
@@ -15,7 +16,7 @@ import {
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 
 interface ArticleDetailsCommentsProps {
-    id: string
+    id?: string
 }
 
 export const ArticleDetailsComments = ({ id }: ArticleDetailsCommentsProps) => {
@@ -36,7 +37,9 @@ export const ArticleDetailsComments = ({ id }: ArticleDetailsCommentsProps) => {
 
         <VStack max gap="16" className={classNames('', {}, [])}>
             <Text size={TextSize.L} title={t('Комментарии')} />
-            <AddCommentForm onSendComment={onSendComment} />
+            <Suspense fallback={<Loader />}>
+                <AddCommentForm onSendComment={onSendComment} />
+            </Suspense>
             <CommentList comments={comments} isLoading={commentsIsLoading} />
         </VStack>
     );
