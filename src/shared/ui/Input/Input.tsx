@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import React, {
     InputHTMLAttributes, memo, MutableRefObject, useEffect, useRef, useState,
 } from 'react';

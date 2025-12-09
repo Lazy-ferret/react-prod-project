@@ -1,6 +1,6 @@
-import { Text } from 'shared/ui/Text/Text';
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Text } from '@/shared/ui/Text/Text';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { AddCommentFormSchema } from '../types/addCommentForm';
 
 const initialState: AddCommentFormSchema = {
